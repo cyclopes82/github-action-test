@@ -2,8 +2,12 @@ name: Actions Workflow
 
 #on: [push, pull_request]
 on: 
-  schedule:
-    - cron: "0/30 * * * *"
+  push:
+    branches:
+      - master
+      #- 'feature/*' #matches feature/featA, feature/featB
+  #schedule:
+  #  - cron: "0/30 * * * *"
  # push:
   pull_request:
     types: [closed, assigned, opened, reopened]
