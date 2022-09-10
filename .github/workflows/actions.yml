@@ -5,7 +5,8 @@ on:
   push:
     branches:
       - master
-      #- 'feature/*' #matches feature/featA, feature/featB
+      #- 'feature/*' #matches feature/featA, feature/featB -- Doestn't match with feature/feat/a
+      #- 'feature/**' It will match feature/feat/A
   #schedule:
   #  - cron: "0/30 * * * *"
  # push:
